@@ -5,6 +5,7 @@ import { BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Cart from './Components/Cart';
 
 
+
 export const CartItemsContext = createContext()
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/cart' element={<Cart cart ={cart} setCart={setCart} />}/>
           <Route path='/' element={<Home cart ={cart} setCart={setCart}/>}/>
+        
         </Routes>
       </Router>
     </div>

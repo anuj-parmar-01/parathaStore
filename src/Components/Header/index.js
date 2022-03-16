@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import Cart from '../Cart';
 
-export default function Header(){
+export default function Header({cart}){
     return (
         <>
         <nav class="flex items-center justify-between flex-wrap  p-6">
@@ -19,7 +20,7 @@ export default function Header(){
      
     </div>
     <div>
-      <Link to="/cart" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</Link>
+      <Link to="/cart" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">cart {cart.length}</Link>
     </div>
   </div>
 </nav>

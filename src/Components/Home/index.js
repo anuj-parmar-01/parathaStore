@@ -8,7 +8,7 @@ export default function Home({cart,setCart}) {
     
     return (
         <>
-         <Header/>  
+         <Header cart={cart}/>  
             <div className='text-white font-medium text-3xl text-center'>Order Tastiest Parathas</div>
             <div className='flex flex-wrap gap-2.5'>
                 {parathaList.map((paratha, index) => {

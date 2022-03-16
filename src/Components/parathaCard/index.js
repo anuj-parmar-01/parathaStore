@@ -4,6 +4,11 @@ import styles from './parathaCard.module.css'
 
 export default function ParathaCard(props){
 
+    const removeItemFromCart= () => {
+        let NewCartItems = props.cart.filter(e => e.id !== props.paratha.id)
+        props.setCart(NewCartItems)
+    }
+console.log(props.cart,'inside home')
     return (
        <>
        <div className={styles.container}>
@@ -13,8 +18,8 @@ export default function ParathaCard(props){
            <div className='p-4 text-center text-white'>
                <h1 className='text-2xl font-semibold mt-2'>{props.paratha.parantha} Paratha</h1>
                <div className='text-xl font-medium mt-2'>Rs. {props.paratha.price}</div>
-               {props.cart.includes(props.paratha) ? (
-               <button onClick={()=> props.setCart([...props.cart, props.paratha])} className='w-2/4 bg-red-800 text-white h-9 font-medium mt-2'>Remove from Cart</button>)
+               {props.cart.find(e=> e.id === props.paratha.id) ? (
+               <button onClick={removeItemFromCart} className='w-2/4 bg-red-800 text-white h-9 font-medium mt-2'>Remove from Cart</button>)
                 : ( <button onClick={()=> props.setCart([...props.cart, props.paratha])} className='w-2/4 bg-red-800 text-white h-9 font-medium mt-2'>Add To Cart</button>
 
                )}
