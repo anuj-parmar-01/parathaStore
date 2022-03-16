@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React , {useState, createContext} from 'react'
 import './App.css';
+import Home from './Components/Home';
+import { BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import Cart from './Components/Cart';
+
+
+export const CartItemsContext = createContext()
 
 function App() {
+  const [cart ,setCart] = useState([])
+  console.log(cart,'inside app')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+      <Router>
+        <Routes>
+          <Route path='/cart' element={<Cart cart ={cart} setCart={setCart} />}/>
+          <Route path='/' element={<Home cart ={cart} setCart={setCart}/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
