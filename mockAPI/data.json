@@ -1,3 +1,40 @@
 {
- "parantha" : [ {"parantha" : "Aloo" , "price":"100", "img": "https://cdn.cdnparenting.com/articles/2020/01/19152919/Aloo-Paratha-Recipe.webp"}]
+    "paratha": [
+        {
+            "parantha": "Plain paratha +Yogurt",
+            "id": "1",
+            "price": "40",
+            "img": "https://cdn.cdnparenting.com/articles/2020/01/19152919/Aloo-Paratha-Recipe.webp",
+            "addOn": ["Extra Sauce"]
+        },
+        {
+            "parantha": "Aalo Paratha",
+            "id": "2",
+            "price": "50",
+            "img": "https://cdn.cdnparenting.com/articles/2020/01/19152919/Aloo-Paratha-Recipe.webp",
+            "addOn" : ["Extra Sauce", "Yogurt", "Cheese"]
+        },
+        {
+            "parantha": "Veg Paratha",
+            "id": "3",
+            "price": "50",
+            "img": "https://cdn.cdnparenting.com/articles/2020/01/19152919/Aloo-Paratha-Recipe.webp",
+            "addOn" :["Corn", "Cabbage", "Fenugreek", "Cheese"]
+        },        
+        {
+            "parantha": "Double Cheese Paratha",
+            "id": "4",
+            "price": "70",
+            "img": "https://cdn.cdnparenting.com/articles/2020/01/19152919/Aloo-Paratha-Recipe.webp",
+            "addOn" :["Extra Sauce", "Yogurt", "Corn"]
+        }
+        ,
+        {
+            "parantha": "Corn Cheese Paratha",
+            "id": "8",
+            "price": "80",
+            "img": "https://cdn.cdnparenting.com/articles/2020/01/19152919/Aloo-Paratha-Recipe.webp",
+            "addOn" :["Extra Sauce", "Yogurt", "Cheese"]
+        }
+    ]
 }
